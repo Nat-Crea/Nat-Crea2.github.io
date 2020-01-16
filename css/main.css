@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	background-image: url(bambu.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+/**** Cabecera ****/
+
+#menu {
+	width: 100%;	
+	position: fixed;
+	z-index: 5000;
+	background-color: black;
+	color: white;
+}
+
+
+#menu ul {
+	list-style-type: none;
+	text-align: right;
+	padding: 15px 30px 15px 0;
+}
+
+#menu ul li{
+	display: inline-block;
+	text-align: center;
+	padding:0 15px;
+	font-size: 18px;
+	transition: color 0.3s linear;
+}
+
+#menu ul li:hover {
+	color: #67EFF5;
+}
+
+
+#titulo {
+	padding-top: 90px;
+	width: 30%;
+	text-align: center;
+	margin: auto;
+}
+
+h1 {
+	font-size: 60px;
+	font-family: fantasy;
+}
+
+h2 {
+	padding-top: 15px;
+	font-family: sans-serif;
+	font-size: 20px;
+}
+
+
+/*** Main ***/
+
+.fotorama {
+	width: 70%;
+	margin: 50px auto;
+}
+
+
+#tabs {
+	width: 90%;
+	margin: auto;
+}
+
+#tabs-1, #tabs-2, #tabs-3  {
+	display: flex;
+	justify-content: space-around;
+}
+
+.texto {
+	width: 45%;
+	line-height: 30px;
+}
+
+#barco {
+	display: flex;
+	width: 90%;
+	justify-content: space-around;
+	margin: 50px auto;
+	background-color: #D2B48C;
+}
+
+
+
+#fotos-hover {
+	padding: 50px 0;
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+
+#cruceros-titulo {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 26px;
+	font-family: sans-serif;
+}
+
+
+
+/*** Footer ***/
+
+.pie {
+	width: 100%;
+	padding: 15px 0;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	background-color: black;
+}
+
+
+@media screen and (max-width: 900px){
+	#tabs-1, #tabs-2, #tabs-3, #barco, #fotos-hover {
+		flex-direction: column;
+	}
+	.imagen img {
+		width: 100%;
+	}
+	.texto {
+		width: 100%;
+	}
+	#droppable {
+		width: 90% !important;
+	}
+	.barco {
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
