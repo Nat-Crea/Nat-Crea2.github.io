@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>La Ruta</title>
+	<meta name="author" content="Your Name">
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="icon" type="image/x-icon" href=""/>
+	
+	<link  href="jquery/fotorama-4.6.2/fotorama.css" rel="stylesheet">
+	<link rel="stylesheet" href="jquery/jquery-ui.css">
+ 	<link rel="stylesheet" href="css/main.css">
+	<style>
+  #draggable { width: 370px; height: 270px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 770px; height: 490px; padding: 0.5em; float: left; margin: 10px; }
+  </style>
+	
+	<script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+	<script src="jquery/fotorama-4.6.2/fotorama.js"></script>
+    <script>
+	  $( function() {
+		$( "#tabs" ).tabs();
+	  } );
+   </script>
+	
+  	<script src="jquery/jquery-ui.js"></script>
+  	<script>
+  		$( function() {
+    		$( "#draggable" ).draggable();
+    		$( "#droppable" ).droppable({
+      			drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "¿Ha sido divertido? ¡Vive tu propio crucero!" );
+      }
+    });
+  } );
+  </script>
+
+		
+	
+</head>
+
+<body>
+	<header>
+
+	<div id="menu">
+	<nav>
+		<ul>
+			<li>Quiénes somos</li>
+			<li>Destinos en ruta</li>
+			<li>Tu viaje a medida</li>
+			<li>Contáctanos</li>
+		</ul>
+	</nav>
+	</div>
+	
+         <div id="titulo">
+             <hgroup>
+                 <h1>La Ruta</h1>
+                 <h2>Otra forma de viajar</h2>
+             </hgroup>
+         </div>
+	</header>
+	
+	
+	<main>
+	
+	<div class="fotorama">
+  		<img src="img/vietnam1.jpg">
+  		<img src="img/vietnam2.jpg">
+  		<img src="img/vietnam3.jpg">
+	</div>
+	
+	
+	<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Rutas Vietnam</a></li>
+    <li><a href="#tabs-2">Rutas Camboya</a></li>
+    <li><a href="#tabs-3">Rutas Indonesia</a></li>
+  </ul>
+		
+		
+  <div id="tabs-1">
+	<div class="imagen"><img src="img/pestana-vietnam.jpg"></div> 
+    <div class="texto"><p>Vietnam ofrece infinidad de experiencias inolvidables... Sublimes, como otear el surrealista paisaje de islas de caliza desde la cubierta de un junco en la bahía de Halong. Desquiciantes, como tardar 10 min en cruzar una calle entre miles de motos en Hanói. Inspiradoras, como explorar el sistema de cuevas más espectacular del mundo en el Parque Nacional de Phong Nha-Ke Bang. Cómicas, como observar un ciclomotor cargado de cerdos avanzar zigzagueando por un camino rural. Y, también, reflexivas, como observar una tumba solitaria en un cementerio repleto de miles de víctimas de la guerra.</p></div> 
+  </div>
+  <div id="tabs-2">
+	<div class="imagen"><img src="img/pestana-camboya.jpg"></div>
+    <div class="texto"><p>Camboya, el Reino de las Maravillas, uno de los principales destinos más atractivos del sudeste asiático, donde el viajero podrá experimentar y descubrir un mundo lleno de tesoros y excelencias. Camboya no es solo un lugar para admirar las obras arquitectónicas que nos ha dejado la antigua civilización Khmer, es también un lugar para involucrarse y descubrir su rica cultura y la simpatía de la gente camboyana. Nos gusta seducir a nuestros viajeros con itinerarios a medida, mezclando excursiones culturales, relax en las playas y con experiencias más activas como el trekking, actividades acuáticas, bicicleta, elefantes, etc. ¡Ven, porque Camboya te va a enamorar!.</p></div>
+  </div>
+  <div id="tabs-3">
+	<div class="imagen"><img src="img/pestana-indonesia.jpg"></div>
+    <div class="texto"><p>¿Te has preguntado alguna vez qué ver en Indonesia ? Pues nada más y nada menos que unas 17.000 islas y pequeños islotes conforman y te esperan en este destino. Ideal para quienes apuesten por el turismo mas exclusivo, en hoteles de lujo o más económicos.... Playas paradisíacas, volcanes milenarios, ríos vertiginosos, románticos lagos, cataratas entre selvas,  templos fascinantes,  etnias primitivas y una  flora y fauna sin igual.... Java, Bali, Kalimantan, Sumatra, Flores y Komodo entre otros lugares brindan un impresionante abanico de opciones para cualquier viajero y tienes que decidir qué ver en Indonesia.</p></div>
+  </div>
+</div>
+	
+	<div id="barco">
+		<div id="draggable" class="ui-widget-content">
+  		<img src="img/barco-pequeno.jpg">
+		<p>Haz click en el barco y llévalo a la bahía</p>
+		</div>
+ 
+		<div id="droppable" class="ui-widget-header">
+		<img class="barco" src="img/bahia-halong-vietnam.jpg">
+  		<p>Suelta el barco aquí, en la Bahía de Ha Long</p>
+		</div>		
+	</div>
+		
+	<div id="cruceros-titulo"><h3>Cruceros a tu medida</h3></div>
+	<div id="fotos-hover">
+		<img src="img/crucero-halong.jpg" title="Cruceros por la Bahía Ha Long">
+		<img src="img/crucero-vapor.jpg" title="Cruceros a vapor">
+		<img src="img/crucero-atardecer.jpg" title="Cruceros al atardecer">
+		<img src="img/indonesia.jpg" title="Cruceros por Indonesia">
+	</div>
+	
+	
+	</main>
+	<footer class="pie">Natalia Fernández Cabrera</footer>
+	<script type="text/javascript" src=""></script>
+	
+	
+	<script src="jquery/wayou-SlipHover-00cdb7f/src/jquery.sliphover.min.js"></script>
+	<script>
+		$("#fotos-hover").sliphover();
+	</script>
+	
+	
+</body>
+
+</html>
